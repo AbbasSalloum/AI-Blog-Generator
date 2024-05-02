@@ -5,11 +5,11 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'index.html')
 
-def login(request):
+def user_login(request):
     pass
 
-def signup(request):
+def user_signup(request):
     pass
 
-def logout(request):
+def user_logout(request):
     pass
