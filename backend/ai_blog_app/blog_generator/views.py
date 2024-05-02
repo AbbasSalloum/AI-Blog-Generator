@@ -6,10 +6,10 @@ def index(request):
     return render(request, 'index.html')
 
 def user_login(request):
-    pass
+    return render(request, 'login.html')
 
 def user_signup(request):
-    pass
+    return render(request, 'Signup.html')
 
 def user_logout(request):
     pass
