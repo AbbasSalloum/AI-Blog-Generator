@@ -10,6 +10,10 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     return render(request, 'index.html')
 
+def generate_blog(request):
+    pass
+
+
 def user_login(request):
     if request.method == 'POST':
         username = request.POST['username']
