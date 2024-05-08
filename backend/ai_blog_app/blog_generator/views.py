@@ -9,7 +9,7 @@ import json
 from pytube import YouTube
 import os
 import assemblyai as aai
-import openai
+from meta_ai_api import MetaAI
 import environ  
 
 env = environ.Env()
@@ -83,17 +83,15 @@ def get_transcription(link):
     return transcript.text
 
 def generate_blog_from_transcription(transcription):
-    openai.api_key = env("OPENAI_KEY")
 
     prompt = f"Based on the following transcript from a YouTube video, write a comprehensive blog article, write it based on the transcript, but dont make it look like a youtube video, make it look like a proper blog article:\n\n{transcription}\n\nArticle:"
+    ai = MetaAI()
+    response = ai.prompt(message= prompt)
+    print(response)
 
-    response = openai.completions.create(
-        model="gpt-3.5-turbo-instruct",
-        prompt=prompt,
-        max_tokens=250
-    )
+    generated_content = response['message']
 
-    generated_content = response.choices[0].text.strip()
+    print(generated_content)
 
     return generated_content
 
