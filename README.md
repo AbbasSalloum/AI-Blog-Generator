@@ -11,9 +11,9 @@ The video transcript is attained using `AssemblyAI API` then that transcript is 
 The application runs on your local server.
 
 ## Technical Requirements
-`
+```
 -Languages: Python (3.0+)
 -Frameworks: Django
 -Database: PostgreSQL
-`
+
  
