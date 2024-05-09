@@ -21,5 +21,8 @@ The application runs on your local server.
 ```
 git clone https://github.com/AbbasSalloum/AI-Blog-Generator.git
 ```
+- `cd ai_blog_app` to access the main repository
+- `pip install any requirements` to install the projects dependencies
+- `python manage.py runserver` to run the application on ` http://127.0.0.1:8000/`
 
  
