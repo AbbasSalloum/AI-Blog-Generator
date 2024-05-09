@@ -17,4 +17,9 @@ The application runs on your local server.
 -Database: PostgreSQL
 ```
 
+## Running the Application
+```
+git clone https://github.com/AbbasSalloum/AI-Blog-Generator.git
+```
+
  
