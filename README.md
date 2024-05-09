@@ -1,6 +1,6 @@
 # AI-Blog-Generator
-A Django web application that takes any youtube link and generates a blog article from the transcript of that video.
-The video transcript is attained using AssemblyAI API then that transcript is transformed into a blog post using Meta AI API.
+A `Django` web application that takes any youtube link and generates a blog article from the transcript of that video.
+The video transcript is attained using `AssemblyAI API` then that transcript is transformed into a blog post using `Meta AI API`.
 
 # Key Features
  - Upon entering the web application, the user can either signup or login if they already signed up
