@@ -15,5 +15,6 @@ The application runs on your local server.
 -Languages: Python (3.0+)
 -Frameworks: Django
 -Database: PostgreSQL
+```
 
  
