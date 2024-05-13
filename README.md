@@ -6,4 +6,23 @@ The video transcript is attained using `AssemblyAI API` then that transcript is 
  - Upon entering the web application, the user can either signup or login if they already signed up
  - The user can then add a youtube link to generate a blog post or look into old posts saved to their account
  - Every user can access the blog posts and get the title of the post with the post summary
+
+# Development Requirements
+The application runs on your local server.
+
+## Technical Requirements
+```
+-Languages: Python (3.0+)
+-Frameworks: Django
+-Database: PostgreSQL
+```
+
+## Running the Application
+```
+git clone https://github.com/AbbasSalloum/AI-Blog-Generator.git
+```
+- `cd ai_blog_app` to access the main repository
+- `pip install any requirements` to install the projects dependencies
+- `python manage.py runserver` to run the application on ` http://127.0.0.1:8000/`
+
  
