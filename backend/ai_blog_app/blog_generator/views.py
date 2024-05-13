@@ -10,6 +10,7 @@ from pytube import YouTube
 import os
 import assemblyai as aai
 from meta_ai_api import MetaAI
+from .models import BlogPost
 import environ  
 
 env = environ.Env()
@@ -40,19 +41,19 @@ def generate_blog(request):
             return JsonResponse({'error': " Failed to get transcript"}, status=500)
 
 
-        # use OpenAI to generate the blog
+        # use MetaAI to generate the blog
         blog_content = generate_blog_from_transcription(transcription)
         if not blog_content:
             return JsonResponse({'error': " Failed to generate blog article"}, status=500)
 
         # save blog article to database
-        # new_blog_article = BlogPost.objects.create(
-        #     user=request.user,
-        #     youtube_title=title,
-        #     youtube_link=yt_link,
-        #     generated_content=blog_content,
-        # )
-        # new_blog_article.save()
+         new_blog_article = BlogPost.objects.create(
+            user=request.user,
+            youtube_title=title,
+            youtube_link=yt_link,
+            generated_content=blog_content,
+        )
+        new_blog_article.save()
 
         # return blog article as a response
         return JsonResponse({'content': blog_content})
