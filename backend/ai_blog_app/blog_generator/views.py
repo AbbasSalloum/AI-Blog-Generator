@@ -47,7 +47,7 @@ def generate_blog(request):
             return JsonResponse({'error': " Failed to generate blog article"}, status=500)
 
         # save blog article to database
-         new_blog_article = BlogPost.objects.create(
+        new_blog_article = BlogPost.objects.create(
             user=request.user,
             youtube_title=title,
             youtube_link=yt_link,
