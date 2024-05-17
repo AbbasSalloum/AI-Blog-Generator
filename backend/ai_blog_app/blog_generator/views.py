@@ -98,9 +98,9 @@ def generate_blog_from_transcription(transcription):
 
 
 
-# def blog_list(request):
-#     blog_articles = BlogPost.objects.filter(user=request.user)
-#     return render(request, "all-blogs.html", {'blog_articles': blog_articles})
+def blog_list(request):
+    blog_articles = BlogPost.objects.filter(user=request.user)
+    return render(request, "all-blogs.html", {'blog_articles': blog_articles})
 
 # def blog_details(request, pk):
 #     blog_article_detail = BlogPost.objects.get(id=pk)
