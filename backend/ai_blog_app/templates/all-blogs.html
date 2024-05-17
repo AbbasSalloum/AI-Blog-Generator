@@ -31,14 +31,13 @@
             <section>
                 <h2 class="text-xl mb-4 font-semibold">All Blog Posts</h2>
                 <div class="space-y-4">
+                    {% for article in blog_articles reversed %}
                     <div class="border border-gray-300 p-4 rounded-lg">
-                        <h3 class="text-lg font-semibold">Blog Post Title 1</h3>
-                        <p>This is the content of the blog post. lorem ipsum .....</p>
+                        <h3 class="text-lg font-semibold">{{article.youtube_title}}</h3>
+                        <p>{{article.generated_content|truncatechars:80}}</p>
                     </div>
-                    <div class="border border-gray-300 p-4 rounded-lg">
-                        <h3 class="text-lg font-semibold">Blog Post Title 2</h3>
-                        <p>This is the content of the blog post. lorem ipsum .....</p>
-                    </div>
+                    {% endfor %}
+                
                     <!-- Repeat -->
                 </div>
             </section>
