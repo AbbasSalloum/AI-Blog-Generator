@@ -32,11 +32,14 @@
                 <h2 class="text-xl mb-4 font-semibold">All Blog Posts</h2>
                 <div class="space-y-4">
                     {% for article in blog_articles reversed %}
-                    <div class="border border-gray-300 p-4 rounded-lg">
-                        <h3 class="text-lg font-semibold">{{article.youtube_title}}</h3>
-                        <p>{{article.generated_content|truncatechars:80}}</p>
-                    </div>
+                    <a href="blog-details/{{article.id}}">
+                        <div class="border border-gray-300 p-4 rounded-lg">
+                            <h3 class="text-lg font-semibold">{{article.youtube_title}}</h3>
+                            <p>{{article.generated_content|truncatechars:80}}</p>
+                        </div>
+                    </a>
                     {% endfor %}
+                   
                 
                     <!-- Repeat -->
                 </div>
